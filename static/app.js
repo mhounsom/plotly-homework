@@ -1,7 +1,7 @@
 // function for plotting
 // Use D3 fetch to read the JSON file
 function plotInfo(id) {
-  d3.json("../data/samples.json").then((importedData) => {
+  d3.json("../samples.json").then((importedData) => {
 
     console.log("data from json for charts: ", importedData);
 
@@ -93,7 +93,7 @@ function plotInfo(id) {
 
 // create function to get json data for demographic info
 function demoInfo(id) {
-  d3.json("../data/samples.json").then((data)=> {
+  d3.json("../samples.json").then((data)=> {
       
     var metadata = data.metadata;
 
@@ -129,7 +129,7 @@ function optionChanged(yeah) {
 function init() { 
   var dropdown = d3.select("#selDataset");
  
-  d3.json("../data/samples.json").then((data)=> {
+  d3.json("../samples.json").then((data)=> {
       console.log("checking to see if json loads for dropdown selection: ", data)
 
       // ids for dropdown
